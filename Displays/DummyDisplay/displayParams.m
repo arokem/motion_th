@@ -11,5 +11,5 @@ params.screenNumber = 1;
 % Descriptive parameters
 params.computerName = 'dummy ';
 params.monitor = 'CRT';
-params.card = 'What graphics card does the computer have'; 
+params.card = 'What graphics card does the computer have?'; 
 params.position = 'UCSD?';
