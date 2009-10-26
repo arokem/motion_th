@@ -5,8 +5,13 @@ stimParams.regions = 8;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%Change this: 
 
+%This determines the location in which the stimulus will appear: 
 stimParams.locat=2;
- 
+
+%This will determine the directions used in this run: 
+stimParams.dotDirections = linspace(0,315,8); %Many motion directions are used in pre- and post-training 
+stimParams.dotDirections = linspace(45,45,8); %Only one direction is used during training
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 stimParams.size = [1.5 3.1];
@@ -37,15 +42,9 @@ stimParams.dotSize = 0.03;          %equivalent to 2 x 2 pixels for 800 x 600 mo
 %stimParams.dotSize = 0.02;         %equivalent to single pixel for 800 x 600 monitor
 stimParams.dotLifeTime = 2;         %frames
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%Change this: 
-
-stimParams.dotDirections = linspace(0,315,8); %linspace(0,315,8); %  If many motion directions are used %linspace(45,45,8); If only one direction is used.% If many motion directions are used %  2
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 stimParams.dotDirections = stimParams.dotDirections(randperm(length(stimParams.dotDirections)));
 stimParams.diff=[0 5];
-stimParams.dotLocatOne=1;   %The location if only one motion location is used
+stimParams.dotLocatOne=1;   
 stimParams.dotCoherenceDiscrimination=1;
 
 %QUEST params
