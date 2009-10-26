@@ -1,0 +1,55 @@
+%function postSessOps(scanner,display,numOfTrials,trialDur,interTrialDur,time)
+%
+%After each session the following operations are executed: the time it
+%took to run the session is compared to the time it actually took. 
+%If the run is occuring in the scanner, two post-session ttl pulses are
+%collected and their times are note (in order to make sure that the
+%run-time for the scan was as long as the run-time for the behavioral
+%code). 
+%
+%<scanner> is a double, where:
+% 1 is Minor Hall Room 582D (the LCD)
+% 2 is the Varian Scanner LCD display
+% 3 is Minor Hall Room 582J (the CRT)
+%
+%<display>
+%
+%<numOfTrials> number of trials in the session
+%
+%<trialDur> The duration of all the operations in a trial
+%
+%<time> the time when the session began
+
+
+
+function postSessOps(scanner,display,numOfTrials,trialDur,interTrialDur,time)
+
+theoreticalruntime=numOfTrials*trialDur; 
+
+disp(['Final run time: ',num2str(round((GetSecs-time)*100)/100)]);
+disp(['Should be: ', num2str(theoreticalruntime)]);
+
+if (scanner == 2)  %Varian scanner
+    trigger = KbName('t');
+    while 1
+        WaitSecs(0.001);
+        [a,b,keycode] = PsychHID('KbCheck',display.forpnum);
+        [a,b,keycode1] = PsychHID('KbCheck',display.keyboarddevnum);
+        if (keycode(trigger) | keycode1(trigger))
+            break;
+        end
+    end
+    disp(['First post-stimulus TTL pulse: ',num2str(round((b-time)*100)/100)]);
+    WaitSecs(0.1)
+
+    clear keycode; clear keycode1;
+    while 1
+        WaitSecs(0.001);
+        [a,b,keycode] = PsychHID('KbCheck',display.forpnum);
+        [a,b,keycode1] = PsychHID('KbCheck',display.keyboarddevnum);
+        if (keycode(trigger) | keycode1(trigger))
+            break;
+        end
+    end
+    disp(['Second post-stimulus TTL pulse: ',num2str(round((b-time)*100)/100)]);
+end

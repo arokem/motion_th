@@ -1,0 +1,34 @@
+%function time=getStartScan(scanner)
+%
+%If in the varian scanner, this waits for a ttl pulse from the scanner and
+%reports the time that ttl pulse was registered. Otherwise, it reports the
+%time this function was called. That is, does absolutely nothing ;)
+%
+%11/20/2006 ASR wrote it
+
+
+function time=getStartScan(scanner, display)
+
+
+if (scanner == 1 || scanner==3 || scanner ==8) %psychophysics setups - no ttl pulse
+    time = GetSecs;
+
+else % fMRI 
+    
+    if scanner == 7 || scanner ==5 trigger = 34; %BIC 3T 
+    elseif scanner == 6 || scanner == 4 trigger = KbName('t'); %NIC and Davis scanners
+    end
+    clear keycode; clear keycode1;
+    while 1
+        WaitSecs(0.001);
+        if isfield(display, 'forpnum')
+            [a,b,keycode] = PsychHID('KbCheck',display.forpnum);
+        else
+            [a,b,keycode] = PsychHID('KbCheck',display.keyboarddevnum);
+        end
+        if (keycode(trigger))
+            time=GetSecs;  %this gets the time of the first scan.
+            break;
+        end
+    end
+end

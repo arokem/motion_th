@@ -1,0 +1,5 @@
+function color=colorFromContrast(contrast,display)
+
+gamma=display.gammaTable/; 
+
+color=gamma(ceil(contrast.*length(gamma)),:)*255; 
