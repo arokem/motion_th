@@ -1,0 +1,15 @@
+function params = displayParams
+
+% Critical parameters
+params.numPixels = [400 300];
+params.dimensions = [8 6];
+params.distance = 20; %cm - when the screen is placed according to the carpet square.
+params.frameRate = 60;
+params.cmapDepth = 10;
+params.screenNumber = 0;       
+
+% Descriptive parameters
+params.computerName = 'ariel_macbook';
+params.monitor = 'built-in LCD';
+params.card = 'GeForce8600'; 
+params.position = 'Wherever the laptop happens to be :)';
