@@ -14,4 +14,5 @@ soundFeedback.correctResponseSound = audioplayer(soundFreqSweep(300, 800, .1),80
 soundFeedback.incorrectResponseSound = audioplayer(soundFreqSweep(8000, 200, .1),8000);
 soundFeedback.startStimulusSound = audioplayer(soundFreqSweep(1, 10000, 200, .1),8000);
 
+soundFeedback.noSound = audioplayer(soundFreqSweep(200, 300, 0) * 3,8000);
 

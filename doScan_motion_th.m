@@ -11,8 +11,8 @@ function scanHistory = doScan_motion_th6(display, image_sta_xy, a, b, params, se
 
 % Make auditory feedback sounds:
 soundFeedback=makeSoundFeedback_G4;
-play(soundFeedback.startStimulusSound);
-play(soundFeedback.startStimulusSound);
+play(soundFeedback.noSound);
+play(soundFeedback.noSound);
 
 putMessage(display.windowPtr,'Press any key to start',display.reservedColor,'white', display.flip);
 getAnyKey(display);

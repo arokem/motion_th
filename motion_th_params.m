@@ -9,8 +9,8 @@ stimParams.regions = 8;
 stimParams.locat=2;
 
 %This will determine the directions used in this run: 
-stimParams.dotDirections = linspace(0,315,8); %Many motion directions are used in pre- and post-training 
-stimParams.dotDirections = linspace(45,45,8); %Only one direction is used during training
+stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used in pre- and post-training 
+%stimParams.dotDirections = linspace(45,45,4); %Only one direction is used during training
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,7 +29,7 @@ stimParams.scanner = 1;			    %help getScannerDisplay
 %stimParams.id = 'ariel_testing';			  	% Subject's initials
 stimParams.feedback = 1;
 stimParams.dummyScans = 0;          % Add one block (six trials) of dummy scans
-stimParams.numberScans = 8;         %Each scan is stimParams.numberTrials long
+stimParams.numberScans = 4;         %Each scan is stimParams.numberTrials long
 stimParams.numOfTrials = 50;        %Each scan is stimParams.numberTrials long
 
 stimParams.fixationSize = .25;      %width and height (degrees of visual angle) 
