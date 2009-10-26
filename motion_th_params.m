@@ -1,7 +1,5 @@
 function stimParams = motion_th_params6
 
-stimParams.regions = 8;
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%Change this: 
 
@@ -14,6 +12,7 @@ stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+stimParams.regions = 8;
 stimParams.size = [1.5 3.1];
 stimParams.RingWidth = .1;
 stimParams.SpokeWidth = .1;
