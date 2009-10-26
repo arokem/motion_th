@@ -4,6 +4,10 @@
 %The size of the difference is calculated using Pelli's QUEST algorithm.
 %031507 ASR made it
 
+
+%Add all the local utilities to the path:
+addpath(genpath(pwd))
+
 clear all; close all;
 AssertOpenGL;
 Priority(9);

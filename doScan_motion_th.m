@@ -1,4 +1,4 @@
-%doScan_motion_th6.m
+%doScan_motion_th.m
 %Uses new version of move_dots_new.m in order to display block-design
 %motion stimuli for oblique effect experiments.
 %Directions presented ARE the major directions - so either
@@ -11,6 +11,8 @@ function scanHistory = doScan_motion_th6(display, image_sta_xy, a, b, params, se
 
 % Make auditory feedback sounds:
 soundFeedback=makeSoundFeedback_G4;
+play(soundFeedback.startStimulusSound);
+play(soundFeedback.startStimulusSound);
 
 putMessage(display.windowPtr,'Press any key to start',display.reservedColor,'white', display.flip);
 getAnyKey(display);
@@ -58,7 +60,7 @@ for trialCounter = 1:params.numOfTrials
     move_dots_new(display.windowPtr, floor(display.frameRate * params.stimulusDuration)-7, a{locat} , b{locat} , angle2pix(display,params.dotDensity), ...
         angle2pix(display,params.dotVelocity), coh, angle2pix(display,params.dotSize), dir1, params.dotLifeTime, display, params, image_sta_xy);
 
-    WaitSecs(params.interStimulusDuration)
+    WaitSecs(params.interStimulusDuration);
 
     move_dots_new(display.windowPtr, floor(display.frameRate * params.stimulusDuration)-7, a{locat} , b{locat} , angle2pix(display,params.dotDensity), ...
         angle2pix(display,params.dotVelocity), coh, angle2pix(display,params.dotSize), dir2, params.dotLifeTime, display, params, image_sta_xy);
