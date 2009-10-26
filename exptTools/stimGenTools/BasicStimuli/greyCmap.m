@@ -1,0 +1,1 @@
+function cmap = greyCmap(display)%cmap = greyCmap(display)% Creates a color map with every entry, except reserved colors% equal to the background colorcolorIndex = findName(display.reservedColor,'background');cmap = ones(display.numColors,1)*display.reservedColor(colorIndex).gunVal;cmap = insertReservedCols(display,cmap);

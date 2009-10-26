@@ -1,0 +1,1 @@
+function deg = rad2deg(rad)% function deg = rad2deg(rad)% Convert radians to degreesdeg = 180*rad/pi;

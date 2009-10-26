@@ -1,0 +1,1 @@
+function serialIn = Serial(string)% serialIn = Serial(string)%	%	string is a list of characters to write to the serial port%   serialIn is all the characters currently in the serialBuffer%   %%

@@ -1,0 +1,1 @@
+function [intensity] = cone2intensity(cone, CImatrix)%%%%%%%%%%%%%%%%%%%%%%%  cone2intensity  %%%%%%%%%%%%%%%%%%%%%%%% use lms2RGB instead% intensity = lms2RGB(cone, CImatrix);

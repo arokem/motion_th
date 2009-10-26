@@ -1,0 +1,1 @@
+function cmap = linearCmap(display)%cmap = linearCmap(display)%%generates a linear color map, ignoring reserved colors.cmap = [0:display.numColors-1]'*ones(1,3);%cmap = insertReservedCols(display,cmap);

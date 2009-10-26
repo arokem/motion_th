@@ -1,0 +1,1 @@
+% Contents of exptTools dataAnalysis folder:% % contents.m% fitCubic.m% fitPolyZeroIntercept.m% fitResultsPsycho.m% fitWeibull.m% plotFitPsycho.m% plotResultsPsycho.m% plotResultsStaircase.m% weibull.m

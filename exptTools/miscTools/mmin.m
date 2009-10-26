@@ -1,0 +1,1 @@
+function y = mmin(x);%y = mmin(x)%   returns minumum value of matrix x - ACROSS ALL DIMENSIONS.%   SEE ALSO mmax%10/21/97 gmb  Wrote it.%note the tricky recursion!y = min(x);if max(size(y)) ~= 1	y = mmin(y);end

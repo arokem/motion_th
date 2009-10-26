@@ -1,0 +1,1 @@
+function n = findName(array,string)%n = findName(array,string)%%Returns first index (n) for which the following is true:%   array(n).name == string%%Returns empty matrix if no match is found.%1/10/98 gmb Wrote it.n = [];for i=1:size(array,2)	if strcmp(array(i).name,string)		n = i;		break;	endend

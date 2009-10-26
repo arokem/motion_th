@@ -1,0 +1,1 @@
+function display=setReservedColor(display,colorName,gunVals)% setReservedColor(display,colorName,gunVals)colorNum = findName(display.reservedColor,lower(colorName));if isempty(colorNum)  disp('Error: No such color defined in structure "display"');else  display.reservedColor(colorNum).gunVal=gunVals;end

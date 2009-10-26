@@ -1,0 +1,1 @@
+function y=squareWave(t,f,p);%function y=squareWave(t,f,[p]);%	Creates a square wave function ranging from 0 to 1%   with frequency f%   and phase p (in radians).  Default phase is 0.if (nargin<3)	p=0;enddt=t(2)-t(1);if isnan(f)	y=ones(size(t));else	y=  (sign(sin(2*pi*f*t+dt/2-p))+1)/2.0;	y(find(y==0.5)) = zeros(size(find(y==0.5)));end

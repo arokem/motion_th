@@ -1,0 +1,1 @@
+function [err,pred] =fitPolyZeroIntercept(p,x,y)%[err,pred] =fitCubic(p,x,[y]);%pred = p(1)*x+p(2)*x.^2+p(3)*x.^3pred = 0;pred =  p(1)*x+p(2)*x.^2+p(3)*x.^3;pred= max(pred,0);if exist('y')	err = ssum( (pred-y).^2);	%add huge penalty for pred<0	err = err + 1000*abs(ssum(pred(pred<0)))^5;else	err = 0;end

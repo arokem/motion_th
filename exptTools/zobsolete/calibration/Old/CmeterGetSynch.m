@@ -1,0 +1,1 @@
+function [synchFreq, status]= cmeterGetSynch% [synchFreq, status] = cmeterGetSynch% % obtain the synch frequency of the synchFreq = cmeter('Cmd', 'F');     %% obtain synch of the monitora = sscanf(synchFreq, '%d,%f');     %% extract synch datasynchFreq = a(2);status = a(1);

@@ -1,0 +1,1 @@
+function y= toBase(x,base)% [y,ystr] = toBase(x,base)% converts x to base [base]if nargin == 1  base = 4;endndigits = floor(log10(x)/log10(base));y = zeros(1,ndigits-1);for place = ndigits:-1:0  placeval = floor(x/(base^place));  y(ndigits-place+1) = placeval;  x = x - placeval*(base^place);end

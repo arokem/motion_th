@@ -1,0 +1,1 @@
+function seq=stripFrames(seq,nSkips)%seq=stripFrames(seq,nSkips)if nargin ==1 	nSkips =2;endtoStrip = find(seq>0);toStrip = [toStrip+1];for i=2:nSkips	toStrip = [toStrip,toStrip+i];endtoStrip = toStrip(toStrip<=length(seq));toKeep = ones(size(seq));toKeep(toStrip) = zeros(1,length(toStrip));seq=seq(find(toKeep));

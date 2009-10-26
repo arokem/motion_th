@@ -1,0 +1,1 @@
+function stimulus = makeFlickerGrating(display,params)%makeFlickerGrating(display,params)img = makeSawtoothImage(display,params);cmap = makeFlickerCmap(display,params);seq = [1,-(0:size(cmap,3))];stimulus = createStimulusStruct(img,cmap,seq);

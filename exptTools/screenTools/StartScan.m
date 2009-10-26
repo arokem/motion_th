@@ -1,0 +1,1 @@
+function StartScan% StartScan%% Starts the MR scanner by sending a% character to the serial port using:%%	OpenDriver("\p.AOut",&pid);% 	SerReset(pid, baud19200+stop10+noParity+data7);% 	FSWrite(pid,&nbyte,str);% 	CloseDriver(pid);% 7/29/97 gmb  wrote the MEX function and this help file.%              original C code provided by Gary Glover (shown below)

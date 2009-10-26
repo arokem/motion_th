@@ -1,0 +1,1 @@
+Expt Tools changes:99.12.01 RFD * makeNAFCStim- made it robust to bit-blits with uneven numbers of frames.  * makePeriodicImages, makePeriodicStiulus- added 'noise' option.

@@ -1,0 +1,1 @@
+function scaleFac = scaleRange(pertRGB,bkgRGB)% AUTHOR: HAB, ABP% DATE:   02.17.98% PURPOSE: This routine returns the scale factor that puts% the sum of incRGB and bkgRGB vector into the values % between 1.0 and 0.0.% bkgRGB is always positivetmpVec = bkgRGB - pertRGB; % No values can be below 0 or above 1

@@ -1,0 +1,1 @@
+% Folder: utilities% % Contents:% % appendWindow.m% compileIntensity.m% compileResults.m% deg2rad.m% expLetive.m% logx2raw.m% logy2raw.m% makeVisAngleMesh.m% mkGaussKernel.m% mmax.m% mmin.m% rad2deg.m% saveImages.m% scale.m% setVal.m% squareWave.m% ssum.m% toBase.m% whatSin.m% widen.m

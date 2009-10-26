@@ -1,0 +1,1 @@
+function y = ssum(x);%y = mmax(x)%    returns total sum of values in matrix x - ACROSS ALL DIMENSIONS.%    SEE ALSO mmin, mmax%10/23/97 gmb  Wrote it.%note the tricky recursion!y = sum(x);if max(size(y)) ~= 1	y = ssum(y);end

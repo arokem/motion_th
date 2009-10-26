@@ -1,0 +1,1 @@
+cd('Ochre3:Applications:MATLAB 5.2:toolbox:exptTools:exptToolsMex:mex projects');mex SerialOut.caddpath('Ochre3:Applications:MATLAB 5.2:toolbox:exptTools:exptToolsMex');

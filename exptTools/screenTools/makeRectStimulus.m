@@ -1,0 +1,1 @@
+function stimulus = makeRectStimulus(display,params);m = angle2pix(display,params.size(1));n = angle2pix(display,params.size(2));stimulus.image= uint8(params.intensity*ones(m,n));stimulus.cmap  = greyCmap(display);stimulus.seq = [1,-1];

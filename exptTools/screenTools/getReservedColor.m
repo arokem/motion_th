@@ -1,0 +1,1 @@
+function c=getReservedColor(display,colorName)% c=getBackgroundColor(display,colorName)colorNum = findName(display.reservedColor,lower(colorName));if isempty(colorNum)  disp('Error: No such color defined in structure "display"');else  c=display.reservedColor(colorNum).fbVal;end

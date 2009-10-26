@@ -1,0 +1,1 @@
+function stimulus = makeDriftGrating(display,params)%makeDriftGrating(display,params)img = makeSawtoothImage(display,params);cmap = makeDriftCmap(display,params);seq = [1,-(0:size(cmap,3))];stimulus = createStimulusStruct(img,cmap,seq);

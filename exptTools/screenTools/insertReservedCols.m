@@ -1,0 +1,1 @@
+function cmap = insertReservedCols(display,cmap)%cmap = insertReservedCols(display,cmap)if isfield(display,'reservedColor')  for colNum = 1:size(display.reservedColor,2)    for cmapNum = 1:size(cmap,3)      cmap(display.reservedColor(colNum).fbVal+1,:,cmapNum) = ...	  		display.reservedColor(colNum).gunVal;    end  endend

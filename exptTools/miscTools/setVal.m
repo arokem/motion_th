@@ -1,0 +1,1 @@
+function m = setval(m,cond,val)%m = setval(m,cond,val)%%sets the entries of 'm' that satisfy the condition 'cond' to%value 'val'.  It's a one line function:%%m(find(cond))= val*ones(size(find(cond)));%%Example%% m = rand(10,10)% cond = m>0.5;% m = setval(m,cond,1)%2/24/98 gmb wrote it for matlab 5m(find(cond))= val*ones(size(find(cond)));
