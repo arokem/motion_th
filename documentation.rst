@@ -24,7 +24,7 @@ proceed. Once a button is pressed, 50 trials should start. Each trial requires
 a speeded response. The subjects are asked to press the '1' button for trials
 in which the two motions were in different directions and to press the '2'
 button, when the motions were in the same direction. If they do not respond
-within the alloted response period, they receive an auditory 'no press'
+within the allotted response period, they receive an auditory 'no press'
 feedback and the next trial is presented. If they respond, they receive an
 auditory 'correct'/'incorrect' feedback. At the end of each block of 50 trials,
 a text appears prompting subjects to continue to the next block. When 4 blocks
@@ -81,7 +81,7 @@ are set at the bottom of the parameters file. The data will be saved under the
 'Results' directory, as '.mat' files, which contain the events of each of the
 trials and a q struct, which records the progress of the staircase
 algorithm. The files are saved with a date stamp and with the subject ID
-appended to the file name. Pleae be sure to use the same ID each time and to
+appended to the file name. Please be sure to use the same ID each time and to
 use different IDs for different subjects, so that we can track who did
 what. The results of the training blocks are saved with a 'motion_th_train'
 prepended. 
