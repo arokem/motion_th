@@ -31,22 +31,27 @@ a text appears prompting subjects to continue to the next block. When 4 blocks
 are over, the desktop will reappear on the screen on which the stimulus was
 displayed.
 
+Another version of the program, 'motion_th_train' is meant for the initial
+training of the subjects and in order to acquaint them with the task. This is
+run in exactly the same way, except everything is stretched in time (long
+stimuli, followed by a long response period). 
+
 Parameters
 ==========
 
-The parameters of the experiment are set in the file 'motion_th_params.m'. The
-first few lines of this file contain the parameters which most often are
-changed. The stimParams.locat can be set to '1', or to '2', which will
-determine which in which of two possible locations (upper left and bottom
-right, OR upper right and bottom left) the coherent dot motion, on which the
-subjects perform a judgment, is presented. The stimParams.dotDirections can be
-set to linspace(45,315,4), which will then contain all 4 oblique
-directions. Alternatively, it can be set to linspace (some_direction,
-some_direction, 4), which will repeat the same direction four times in the four
-blocks of the experiment. In the pre- and post-testing, use both locations and
-the four oblique directions. During training, comment this line and uncomment
-the line in which the directions are set to just one direction. Also - in
-training, use only one of the two locations.
+The parameters of the experiment are set in the file 'motion_th_params.m' (and
+in 'motion_th_train_params'). The first few lines of this file contain the
+parameters which most often are changed. The stimParams.locat can be set to
+'1', or to '2', which will determine which in which of two possible locations
+(upper left and bottom right, OR upper right and bottom left) the coherent dot
+motion, on which the subjects perform a judgment, is presented. The
+stimParams.dotDirections can be set to linspace(45,315,4), which will then
+contain all 4 oblique directions. Alternatively, it can be set to linspace
+(some_direction, some_direction, 4), which will repeat the same direction four
+times in the four blocks of the experiment. In the pre- and post-testing, use
+both locations and the four oblique directions. During training, comment this
+line and uncomment the line in which the directions are set to just one
+direction. Also - in training, use only one of the two locations.
 
 Setting the display
 ===================
@@ -63,7 +68,8 @@ this function. Simply add the display, following the same convention as used
 for the other displays there. Once you have done that, you will need to change
 the parameter setting the display in the parameters file. Simply change the
 parameter stimParams.scanner to the number equivalent to the number of the
-relevant display in getScannerDisplay.
+relevant display in getScannerDisplay. This needs to be changed both in
+'motion_th_params' and in 'motion_th_train_params'.
 
 Data
 ====
@@ -76,5 +82,7 @@ are set at the bottom of the parameters file. The data will be saved under the
 trials and a q struct, which records the progress of the staircase
 algorithm. The files are saved with a date stamp and with the subject ID
 appended to the file name. Pleae be sure to use the same ID each time and to
-use different IDs for different subjects, so that we can track who did what.
+use different IDs for different subjects, so that we can track who did
+what. The results of the training blocks are saved with a 'motion_th_train'
+prepended. 
 
