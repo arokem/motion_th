@@ -4,15 +4,8 @@
 %and sets the background color.
 %
 %<scanner> is a double, where:
-% 1 is Minor Hall Room 582D (the LCD)
-% 2 is the Varian Scanner LCD display
-% 3 is Minor Hall Room 582J (the CRT)
-% 4 is NIC lcd
-% 5 is BIC 3T Avotec projector
-% 6 is the Davis scanner projector (?)
-% 7 is the LCD monitor in the BIC3T
-% 8 is ASR laptop with built in lcd
-%
+% 1 is ASR laptop with built in lcd
+% 2 is
 %The default is 1
 %
 %
@@ -30,9 +23,6 @@
 % myDisplay=getScannerDisplay(params.scanner,[800 600],125,1)
 % myDisplay=getScannerDisplay
 %
-%11/20/06 ASR wrote it
-%021508 ASR - added NIC lcd and BIC 3T Avotec
-%102308 ASR - added Davis lcd
 
 function display=getScannerDisplay (scanner,numPixels,distance,flip)
 
@@ -45,33 +35,12 @@ end
 switch scanner
 
     case 1
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','Minor_582D');
-        display.flip = 0;
-    case 2
-        display = loadDisplayParams_OSX('cmapDepth', 8, 'displayName', 'Varian_scanner');
-        display.flip = 1;
-    case 3
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','Minor_582J');
-        display.flip = 0;
-    case 4
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','NIC_lcd');
-        display.flip = 1;
-    case 5
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','BIC3T_Avotec');
-        display.flip = 0;
-    case 6
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','Davis_scanner');
-        display.flip = 0;
-    case 7
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','LCD_monitor_3T');
-        display.flip = 0;
-    case 8
         display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','ASR_laptop_testing');
         display.flip = 0;
-        case 10
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','NNL');
+    case 2
+        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','Name_of_the_display');
         display.flip = 0;
-        
+
 end
 
 %Set optional variables
