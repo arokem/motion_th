@@ -12,6 +12,9 @@ stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+stimParams.scanner = 1;			    %This determines what display parameters are read (see documentation, help getScannerDisplay)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 stimParams.regions = 8;
 stimParams.size = [1.5 3.1];
 stimParams.RingWidth = .1;
@@ -24,7 +27,6 @@ stimParams.interStimulusDuration = 0.200; %seconds
 stimParams.responseDuration = 0.625;	% seconds
 stimParams.feedbackDuration = 0.25; 	% seconds
 stimParams.fixationPoint = 1;
-stimParams.scanner = 1;			    %help getScannerDisplay
 %stimParams.id = 'ariel_testing';			  	% Subject's initials
 stimParams.feedback = 1;
 stimParams.dummyScans = 0;          % Add one block (six trials) of dummy scans
