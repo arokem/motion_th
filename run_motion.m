@@ -95,3 +95,5 @@ switch mode
         params.scanner = choose_display;
         motion_th_test
 end
+
+Screen('Resolution', display.screenNumber,display.oldResolution.width,display.oldResolution.height,display.oldResolution.hz);
