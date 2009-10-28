@@ -14,7 +14,8 @@ Priority(9);
 Screen('Preference','VisualDebugLevel',0);
 Screen('Preference','SkipSyncTests',1);
 
-[params]=motion_th_params; %Load parameters from parameter file
+
+params = choose_params; 
 
 if ~isfield(params, 'id')
     params.id = input('Enter subject id: ', 's');

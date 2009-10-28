@@ -6,10 +6,10 @@ params.dimensions = [24 18];
 params.distance = 100; %cm
 params.frameRate = 85;
 params.cmapDepth = 8;
-params.screenNumber = 1;      
+params.screenNumber = 0;      
 
 % Descriptive parameters
-params.computerName = 'dummy ';
+params.computerName = 'Macintosh HD';
 params.monitor = 'CRT';
 params.card = 'What graphics card does the computer have?'; 
-params.position = 'UCSD?';
+params.position = 'UCSD 2007b';

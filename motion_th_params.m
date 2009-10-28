@@ -1,10 +1,10 @@
-function stimParams = motion_th_params6
+function stimParams = motion_th_params6(directions,location)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%Change this: 
 
 %This determines the location in which the stimulus will appear: 
-stimParams.locat=2;
+stimParams.locat=location;
 
 %This will determine the directions used in this run: 
 stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used in pre- and post-training 
