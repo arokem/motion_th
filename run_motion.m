@@ -96,4 +96,4 @@ switch mode
         motion_th_test
 end
 
-Screen('Resolution', display.screenNumber,display.oldResolution.width,display.oldResolution.height,display.oldResolution.hz);
+%Screen('Resolution', display.screenNumber,display.oldResolution.width,display.oldResolution.height,display.oldResolution.hz);
