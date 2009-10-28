@@ -9,6 +9,10 @@
 
 function scanHistory = doScan_motion_th6(display, image_sta_xy, a, b, params, session,q);
 
+
+%Make the whiteindex for the visual feedback
+white = WhiteIndex(display.windowPtr);
+
 % Make auditory feedback sounds:
 soundFeedback=makeSoundFeedback_G4;
 play(soundFeedback.noSound);
@@ -70,8 +74,8 @@ for trialCounter = 1:params.numOfTrials
 
     scanHistory.dir1(trialCounter)=dir1;
     scanHistory.dir2(trialCounter)=dir2;
-%              Snd('Play',soundFeedback.startStimulusSound,8000);
-             play(soundFeedback.startStimulusSound);
+    %              Snd('Play',soundFeedback.startStimulusSound,8000);
+    play(soundFeedback.startStimulusSound);
     [keyHit RT]=getResponse(display, params.responseDuration);
 
     if isfield(display,'forpnum')
@@ -83,13 +87,16 @@ for trialCounter = 1:params.numOfTrials
     correct = judgeResponse (this_trial_diff,keyHit,key_diff);
     if correct == 0 %wrong answer
 
+        Screen('DrawDots', display.windowPtr, image_sta_xy, angle2pix(display,params.dotSize),white*[1 0 0],[],1) %Red for incorrect
+        Screen('Flip', display.windowPtr);
+
         scanHistory.response(trialCounter)=str2num(keyHit);
         scanHistory.RT(trialCounter)=RT;
         scanHistory.correct(trialCounter)=correct;
 
         if params.feedback == 1
-          %  Snd('Play',soundFeedback.incorrectResponseSound,8000);
-             play(soundFeedback.incorrectResponseSound);
+            %  Snd('Play',soundFeedback.incorrectResponseSound,8000);
+            play(soundFeedback.incorrectResponseSound);
         end
 
         q=QuestUpdate(q,log10(tTest/params.maxTheta),correct);
@@ -98,13 +105,16 @@ for trialCounter = 1:params.numOfTrials
 
     elseif correct == 1 %right answer
 
+        Screen('DrawDots', display.windowPtr, image_sta_xy, angle2pix(display,params.dotSize),white*[0 1 0],[],1) %Red for incorrect
+        Screen('Flip', display.windowPtr);
+
         scanHistory.response(trialCounter)=str2num(keyHit);
         scanHistory.RT(trialCounter)=RT;
         scanHistory.correct(trialCounter)=correct;
 
         if params.feedback == 1
-          %Snd('Play',soundFeedback.correctResponseSound,8000);
-          play(soundFeedback.correctResponseSound);
+            %Snd('Play',soundFeedback.correctResponseSound,8000);
+            play(soundFeedback.correctResponseSound);
         end
 
         q=QuestUpdate(q,log10(tTest/params.maxTheta),correct);
@@ -116,8 +126,8 @@ for trialCounter = 1:params.numOfTrials
         scanHistory.RT(trialCounter)=NaN;
         scanHistory.correct(trialCounter)=correct;
         if params.feedback == 1
- %         Snd('Play',soundFeedback.noResponseSound,8000);
-          play(soundFeedback.noResponseSound);
+            %         Snd('Play',soundFeedback.noResponseSound,8000);
+            play(soundFeedback.noResponseSound);
         end
 
     end
@@ -132,6 +142,10 @@ for trialCounter = 1:params.numOfTrials
 
     timeToEndTrial = timeToEndTrial + params.feedbackDuration+params.responseDuration;
     waitTill_OSX(timeToEndTrial,display,time);
+
+    Screen('DrawDots', display.windowPtr, image_sta_xy, angle2pix(display,params.dotSize),white*[1 1 1],[],1) %Red for incorrect
+    Screen('Flip', display.windowPtr);
+
 
 end %trialcounter
 

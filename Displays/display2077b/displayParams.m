@@ -2,9 +2,9 @@ function params = displayParams
 
 % Critical parameters
 params.numPixels = [800 600];
-params.dimensions = [24 18];
+params.dimensions = [24 18]; %Size in cm
 params.distance = 100; %cm
-params.frameRate = 85;
+params.frameRate = 75;
 params.cmapDepth = 8;
 params.screenNumber = 0;      
 

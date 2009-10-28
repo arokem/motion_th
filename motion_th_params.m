@@ -1,7 +1,4 @@
-function stimParams = motion_th_params6(directions,location)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%Change this: 
+function stimParams = motion_th_params
 
 %This determines the location in which the stimulus will appear: 
 stimParams.locat=location;
@@ -27,7 +24,7 @@ stimParams.interStimulusDuration = 0.200; %seconds
 stimParams.responseDuration = 0.625;	% seconds
 stimParams.feedbackDuration = 0.25; 	% seconds
 stimParams.fixationPoint = 1;
-%stimParams.id = 'ariel_testing';			  	% Subject's initials
+stimParams.id = ID;                     % Subject's initials
 stimParams.feedback = 1;
 stimParams.dummyScans = 0;          % Add one block (six trials) of dummy scans
 stimParams.numberScans = 4;         %Each scan is stimParams.numberTrials long

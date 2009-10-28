@@ -1,11 +1,9 @@
-function stimParams = motion_th_params_teach(ID)
+function stimParams = motion_th_params_test(location,ID)
 
 %This determines the location in which the stimulus will appear: 
-stimParams.locat=ceil(rand*2); %Choose some random location (1 or 2)
+stimParams.locat=location;
 
-%This will determine the directions used in this run: 
-stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used in pre- and post-training 
-%stimParams.dotDirections = linspace(45,45,4); %Only one direction is used during training
+stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used the 'test' condition
 
 stimParams.regions = 8;
 stimParams.size = [1.5 3.1];
@@ -14,16 +12,16 @@ stimParams.SpokeWidth = .1;
 stimParams.StaRange = 1;     			% color map values reserved for ring
 stimParams.cueDuration = .75;			% seconds
 stimParams.delayDuration = 0.75;		% seconds
-stimParams.stimulusDuration = 1.500;    % seconds 
+stimParams.stimulusDuration = 0.500;    % seconds 
 stimParams.interStimulusDuration = 0.200; %seconds
-stimParams.responseDuration = 3.625;	% seconds
+stimParams.responseDuration = 0.850;	% seconds
 stimParams.feedbackDuration = 0.25; 	% seconds
 stimParams.fixationPoint = 1;
-stimParams.id = ID;			  	% Subject's initials
+stimParams.id = ID;                     % Subject's initials
 stimParams.feedback = 1;
 stimParams.dummyScans = 0;          % Add one block (six trials) of dummy scans
 stimParams.numberScans = 4;         %Each scan is stimParams.numberTrials long
-stimParams.numOfTrials = 10;        %Each scan is stimParams.numberTrials long
+stimParams.numOfTrials = 50;        %Each scan is stimParams.numberTrials long
 
 stimParams.fixationSize = .25;      %width and height (degrees of visual angle) 
 stimParams.type = 'ring';         %type of fixation point
@@ -42,5 +40,5 @@ stimParams.dotCoherenceDiscrimination=1;
 
 %QUEST params
 stimParams.QuestTGuess=22.5;
-stimParams.QuestTGuessSd=0.1;
+stimParams.QuestTGuessSd=0.4;
 stimParams.maxTheta=40;
