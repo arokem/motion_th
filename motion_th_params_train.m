@@ -5,7 +5,7 @@ function stimParams = motion_th_params_train(location,direction, ID)
 stimParams.locat=location;
 
 %This will determine the directions used in this run: 
-stimParams.dotDirections = linspace(direction,direction,4); %The direction here is the training direction
+stimParams.dotDirections = direction; %The direction here is the training direction
 
 stimParams.regions = 8;
 stimParams.size = [1.5 3.1];

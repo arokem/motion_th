@@ -1,9 +1,9 @@
-function stimParams = motion_th_params_test(location,ID)
+function stimParams = motion_th_params_test(location,direction,ID)
 
 %This determines the location in which the stimulus will appear: 
 stimParams.locat=location;
 
-stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used the 'test' condition
+stimParams.dotDirections = direction; %All oblique directions are used the 'test' condition
 
 stimParams.regions = 8;
 stimParams.size = [1.5 3.1];

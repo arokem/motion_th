@@ -30,7 +30,7 @@ time=getStartScan(params.scanner);
 
 coh=params.dotCoherenceDiscrimination;
 
-locat = params.locat;
+locat = params.locat(session)e;
 
 dir=params.dotDirections(session);
 

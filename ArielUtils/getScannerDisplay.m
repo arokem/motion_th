@@ -57,6 +57,3 @@ end
 %display.oldResolution = Screen('Resolution', display.screenNumber,display.numPixels(1),display.numPixels(2),display.frameRate);
 
 display = openScreen_OSX(display);
-
-
-

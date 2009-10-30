@@ -1,7 +1,7 @@
 function stimParams = motion_th_params_teach(ID)
 
 %This determines the location in which the stimulus will appear: 
-stimParams.locat=ceil(rand*2); %Choose some random location (1 or 2)
+stimParams.locat=[ceil(rand*2) ceil(rand*2) ceil(rand*2) ceil(rand*2)]; %Choose some random location (1 or 2)
 
 %This will determine the directions used in this run: 
 stimParams.dotDirections = linspace(45,315,4); %All oblique directions are used in pre- and post-training 
