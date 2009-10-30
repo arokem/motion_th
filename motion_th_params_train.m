@@ -35,7 +35,6 @@ stimParams.dotSize = 0.03;          %equivalent to 2 x 2 pixels for 800 x 600 mo
 %stimParams.dotSize = 0.02;         %equivalent to single pixel for 800 x 600 monitor
 stimParams.dotLifeTime = 2;         %frames
 
-stimParams.dotDirections = stimParams.dotDirections(randperm(length(stimParams.dotDirections)));
 stimParams.diff=[0 5];
 stimParams.dotLocatOne=1;   
 stimParams.dotCoherenceDiscrimination=1;
