@@ -12,7 +12,7 @@ clear all; close all;
 % determines from which directory under Displays the displayParams will be
 % read:
 
-choose_display = 1;
+choose_display = 2;
 
 %##########################################################################
 
@@ -122,4 +122,4 @@ switch mode
         motion_th_test
 end
 
-%Screen('Resolution', display.screenNumber,display.oldResolution.width,display.oldResolution.height,display.oldResolution.hz);
+Screen('Resolution', display.screenNumber,display.oldResolution.width,display.oldResolution.height,display.oldResolution.hz);
