@@ -38,7 +38,7 @@ switch scanner
         display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','ASR_laptop_testing');
         display.flip = 0;
     case 2
-        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','Display2077b');
+        display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','display2077b');
         display.flip = 0;
 
 end
