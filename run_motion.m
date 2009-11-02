@@ -83,10 +83,10 @@ switch mode
 
         if counter_balance_string == '1'
             direction = [t_direction u_direction t_direction u_direction];
-            location = [t_location u_location t_location u_location];
+            location = [t_location t_location t_location t_location];
         else
             direction = [u_direction t_direction u_direction t_direction];
-            location = [u_location t_location u_location t_location];
+            location = [t_location t_location t_location t_location];
         end
 
 
