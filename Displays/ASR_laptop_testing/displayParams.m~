@@ -1,12 +1,13 @@
 function params = displayParams
 
 % Critical parameters
-params.numPixels = [400 300];
-params.dimensions = [8 6];
-params.distance = 20; %cm - when the screen is placed according to the carpet square.
-params.frameRate = 60;
-params.cmapDepth = 10;
+params.numPixels = [800 600];
+params.dimensions = [47 30];
+params.distance = 61; %cm
+params.frameRate = 75;
+params.cmapDepth = 8;
 params.screenNumber = 0;       
+params.thisRect = [0 0 params.numPixels];
 
 % Descriptive parameters
 params.computerName = 'ariel_macbook';

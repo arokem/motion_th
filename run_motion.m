@@ -12,14 +12,14 @@ clear all; close all;
 % determines from which directory under Displays the displayParams will be
 % read:
 
-choose_display = 2;
+choose_display = 1;
 
 %##########################################################################
 
 %Generic stuff:
 
 %Add all the local utilities to the path:
-addpath(genpath(pwd))
+addpath(genpath(pwd),'-begin')
 
 
 %Set Psychtoolbox preferences:
@@ -79,8 +79,16 @@ switch mode
         end
         u_direction = mod(t_direction+180,360);
 
-        direction = [t_direction u_direction t_direction u_direction];
-        location = [t_location u_location t_location u_location];
+        counter_balance_string = questdlg('Which counter-balance group is this subject','counterbalance','1','2','1');
+
+        if counter_balance_string == '1'
+            direction = [t_direction u_direction t_direction u_direction];
+            location = [t_location u_location t_location u_location];
+        else
+            direction = [u_direction t_direction u_direction t_direction];
+            location = [u_location t_location u_location t_location];
+        end
+
 
         params = motion_th_params_test(location,direction,ID);
         params.scanner = choose_display;
