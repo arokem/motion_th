@@ -43,9 +43,6 @@ switch scanner
     otherwise
         disp('could not find display')
 
-    otherwise
-        disp('could not find display')
-
 end
 
 %Set optional variables
