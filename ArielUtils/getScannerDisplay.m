@@ -40,6 +40,8 @@ switch scanner
     case 2
         display = loadDisplayParams_OSX('cmapDepth', 8,'displayName','display2077b');
         display.flip = 0;
+    otherwise
+        disp('could not find display')
 
     otherwise
         disp('could not find display')
