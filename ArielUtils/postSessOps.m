@@ -29,28 +29,3 @@ theoreticalruntime=numOfTrials*trialDur;
 
 disp(['Final run time: ',num2str(round((GetSecs-time)*100)/100)]);
 disp(['Should be: ', num2str(theoreticalruntime)]);
-
-if (scanner == 2)  %Varian scanner
-    trigger = KbName('t');
-    while 1
-        WaitSecs(0.001);
-        [a,b,keycode] = PsychHID('KbCheck',display.forpnum);
-        [a,b,keycode1] = PsychHID('KbCheck',display.keyboarddevnum);
-        if (keycode(trigger) | keycode1(trigger))
-            break;
-        end
-    end
-    disp(['First post-stimulus TTL pulse: ',num2str(round((b-time)*100)/100)]);
-    WaitSecs(0.1)
-
-    clear keycode; clear keycode1;
-    while 1
-        WaitSecs(0.001);
-        [a,b,keycode] = PsychHID('KbCheck',display.forpnum);
-        [a,b,keycode1] = PsychHID('KbCheck',display.keyboarddevnum);
-        if (keycode(trigger) | keycode1(trigger))
-            break;
-        end
-    end
-    disp(['Second post-stimulus TTL pulse: ',num2str(round((b-time)*100)/100)]);
-end
