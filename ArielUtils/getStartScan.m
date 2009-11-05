@@ -10,7 +10,7 @@
 function time=getStartScan(scanner, display)
 
 
-if (scanner == 1 || scanner==3 || scanner ==8) %psychophysics setups - no ttl pulse
+if (scanner == 1 || scanner ==2 || scanner==3 || scanner ==8) %psychophysics setups - no ttl pulse
     time = GetSecs;
 
 else % fMRI 
