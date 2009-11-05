@@ -12,7 +12,7 @@ clear all; close all;
 % determines from which directory under Displays the displayParams will be
 % read:
 
-choose_display = 1;
+choose_display = 2;
 
 %##########################################################################
 
