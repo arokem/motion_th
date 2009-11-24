@@ -3,7 +3,7 @@ function params = displayParams
 % Critical parameters
 params.numPixels = [800 600];
 params.dimensions = [16 12];
-params.distance = 55; %cm
+params.distance = 100; %cm
 params.frameRate = 60;
 params.cmapDepth = 8;
 params.screenNumber = 0;       
