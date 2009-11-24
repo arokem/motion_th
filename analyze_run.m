@@ -33,7 +33,7 @@ out.ub = [];
 out.lb = [];
 out.error = []; 
 
-for i=1:length(dir)
+for i=1:length(out.dir)
     out.th = [out.th results(1).stimParams.QuestTGuess*10^QuestQuantile(results(i).scanHistory.q)];
     out.ub = [out.ub results(1).stimParams.QuestTGuess*10^QuestQuantile(results(i).scanHistory.q,0.95)];
     out.lb = [out.lb results(1).stimParams.QuestTGuess*10^QuestQuantile(results(i).scanHistory.q,0.05)];
