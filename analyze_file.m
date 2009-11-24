@@ -19,7 +19,9 @@
 
 function out = analyze_run(subject, date, session)
 
-uiopen('load')
+[filename,pathname] = uigetfile('load', 'choose a file to analyze');
+filename
+load([pathname,filename])
 
 out.loc = results(1).stimParams.locat;
 out.dir = results(1).stimParams.dotDirections;
