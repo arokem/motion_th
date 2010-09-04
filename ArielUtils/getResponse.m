@@ -49,4 +49,10 @@ if find(keyCode) ~= 0 %some kind of keypress
     if length(keyHit) == 2
         keyHit = keyHit(1);
     end
+    
+    %This is a way out in the middle of a run:
+    if keyHit == 'ESCAPE'
+        sca
+    end
+
 end

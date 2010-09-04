@@ -28,7 +28,7 @@ Screen('Preference','VisualDebugLevel',0);
 Screen('Preference','SkipSyncTests',1);
 
 %Set the subject ID, just in case the demo does run all the way
-subjectID='demo';
+ID='demo';
 
 t_location = 1;
 u_location = 2;

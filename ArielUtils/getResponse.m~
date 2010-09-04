@@ -48,5 +48,7 @@ if find(keyCode) ~= 0 %some kind of keypress
     keyHit = KbName(find(keyCode));
     if length(keyHit) == 2
         keyHit = keyHit(1);
+    if keyHit = 
+            
     end
 end
