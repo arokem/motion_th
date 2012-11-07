@@ -4,11 +4,11 @@ This
 
 ## Dependencies
 
-The software requires 
+The software requires Matlab and the [The Psychtoolbox](http://www.psychtoolbox.org/HomePage) 
 
 ## License:
 
-This software is licensed under the [Creative Commons Attribution 3.0 Unported](http://http://creativecommons.org/licenses/by/3.0/). You may use the software for your own purposes, but please don't forget to cite our work (below). 
+This software is licensed under the [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/). You may use the software for your own purposes, but please don't forget to cite our work (below). 
 
 ## References:
 
