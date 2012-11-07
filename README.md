@@ -12,13 +12,13 @@ This software is licensed under the [Creative Commons Attribution 3.0 Unported](
 
 ## References:
 
-#. A. Rokem and M.A. Silver (2010) Cholinergic enhancement augments
+1. A. Rokem and M.A. Silver (2010) Cholinergic enhancement augments
    magnitude and specificity of visual perceptual learning in healthy humans.
    *Current Biology* 20: 1723-1728
 
-#. A. Rokem and M.A. Silver (2009) A model of encoding and decoding in V1
+2. A. Rokem and M.A. Silver (2009) A model of encoding and decoding in V1
    and MT accounts accounts for motion perception anisotropies in the human
    visual system. *Brain Research* 1299: 3-16.
 
-#. E.A. McDevitt, A. Rokem, M.A. Silver, and S.C. Mednick (in preparation).
+3. E.A. McDevitt, A. Rokem, M.A. Silver, and S.C. Mednick (in preparation).
    Sex differences in sleep-dependent perceptual learning 
