@@ -46,7 +46,6 @@ for trialCounter = 1:params.numOfTrials
     theta=params.maxTheta*10^trialTheta;
     tTest=min(theta,params.maxTheta);
 
-
     if this_trial_diff
         if rand>0.5
             dir1=dir;
@@ -65,6 +64,11 @@ for trialCounter = 1:params.numOfTrials
         angle2pix(display,params.dotVelocity), coh, angle2pix(display,params.dotSize), dir1, params.dotLifeTime, display, params, image_sta_xy);
 
     WaitSecs(params.interStimulusDuration);
+    
+    % ################# 
+    % For making movies:
+    % screen_grab(display.windowPtr)
+    % ################# 
 
     move_dots_new(display.windowPtr, floor(display.frameRate * params.stimulusDuration)-7, a{locat} , b{locat} , angle2pix(display,params.dotDensity), ...
         angle2pix(display,params.dotVelocity), coh, angle2pix(display,params.dotSize), dir2, params.dotLifeTime, display, params, image_sta_xy);
@@ -107,7 +111,7 @@ for trialCounter = 1:params.numOfTrials
 
         Screen('DrawDots', display.windowPtr, image_sta_xy, angle2pix(display,params.dotSize),white*[0 1 0],[],1) %Red for incorrect
         Screen('Flip', display.windowPtr);
-
+        
         scanHistory.response(trialCounter)=str2num(keyHit);
         scanHistory.RT(trialCounter)=RT;
         scanHistory.correct(trialCounter)=correct;
@@ -145,7 +149,6 @@ for trialCounter = 1:params.numOfTrials
 
     Screen('DrawDots', display.windowPtr, image_sta_xy, angle2pix(display,params.dotSize),white*[1 1 1],[],1) %Red for incorrect
     Screen('Flip', display.windowPtr);
-
 
 end %trialcounter
 

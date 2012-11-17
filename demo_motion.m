@@ -21,6 +21,11 @@ choose_display = 2;
 addpath(genpath(pwd),'-begin')
 
 
+% If you are recording a movie: 
+% if ~exist('movie_figs')
+%    mkdir(pwd, 'movie_figs')
+%end 
+
 %Set Psychtoolbox preferences:
 AssertOpenGL;
 Priority(9);

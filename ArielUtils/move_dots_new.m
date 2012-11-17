@@ -19,7 +19,7 @@
 %as determined by the if structure at the very beginning of the function
 
 
-function move_dots_new(window, fram, a, b, dens, vel, coh, siz, dir, how_many_frames, display, params, image_sta)
+function move_dots_new(window, fram, a, b, dens, vel, coh, siz, direction, how_many_frames, display, params, image_sta)
 
 white = WhiteIndex(window);
 
@@ -94,8 +94,8 @@ end
 % Calculate the distance in pixels in the x and in the y direction to move
 % the coherently moving dots in each framechange
 
-dy=round(-1*vel*cos((dir)*(2*pi/360)));
-dx=round(vel*sin((dir)*(2*pi/360)));
+dy=round(-1*vel*cos((direction)*(2*pi/360)));
+dx=round(vel*sin((direction)*(2*pi/360)));
 
 % Loop over all the frames:
 for f=1:fram
@@ -178,6 +178,11 @@ for f=1:fram
     Screen('DrawDots', window,[dot_loc_a' dot_loc_b'], siz, color ,[],1);
     Screen('DrawDots', window, image_sta, siz,white,[],1)
     Screen('Flip', window);
+
+    % #################
+    % For making movies:
+    % screen_grab(window)
+    % #################
 end
 
 %erase dots
