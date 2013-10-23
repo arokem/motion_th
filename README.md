@@ -26,5 +26,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    and MT accounts accounts for motion perception anisotropies in the human
    visual system. *Brain Research* 1299: 3-16.
 
-3. E.A. McDevitt, A. Rokem, M.A. Silver, and S.C. Mednick (in preparation).
-   Sex differences in sleep-dependent perceptual learning 
+3. E.A. McDevitt, A. Rokem, M.A. Silver, and S.C. Mednick (*in press*).
+   Sex differences in sleep-dependent perceptual learning. *Vision Research*.
